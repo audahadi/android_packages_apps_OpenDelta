@@ -125,7 +125,7 @@ public class Config {
         weekly_version_tag = res.getString(R.string.weekly_version_tag);
         security_version_tag = res.getString(R.string.security_version_tag);
         android_version = getProperty(context,
-                res.getString(R.string.android_version), "");
+                res.getString(R.string.android_version), "").split("-")[0];
         filename_base_prefix = String.format(Locale.ENGLISH,
                 res.getString(R.string.filename_base), android_version);
         boolean keep_screen_on = false;
