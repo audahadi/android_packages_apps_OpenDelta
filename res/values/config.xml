@@ -5,43 +5,43 @@
 	<item name="debug_output" type="bool">true</item>
 
 	<!-- Property to read for ROM version -->
-	<string name="property_version">ro.omni.version</string>
+	<string name="property_version">ro.cm.version</string>
 
 	<!-- Property to read for device identifier -->
-	<string name="property_device">ro.omni.device</string>
+	<string name="property_device">ro.cm.device</string>
 
 	<!-- %s is expanded to property_version value. .zip, .delta, .update, .sign extensions added when needed -->
-	<string name="filename_base">omni-%s</string>
+	<string name="filename_base">lineage-%s</string>
 
 	<!-- Path deltas are stored, relative to sdcard root -->
 	<string name="path_base">OpenDelta</string>
 
 	<!-- URL base to find .delta files, %s is expanded to property_device value. Path is suffixed by (expanded) filename_base -->
-	<string name="url_base_delta">https://delta.omnirom.org/weeklies/%s/</string>
+	<string name="url_base_delta">https://www.dropbox.com/sh/p1l35rt6oar5x2w/AACNQeuuvPNNKZR0llXtM40ma/%s/</string>
 
 	<!-- URL base to find .update and .sign files, %s is expanded to property_device value. Path is suffixed by (expanded) filename_base -->
-	<string name="url_base_update">https://delta.omnirom.org/weeklies/%s/</string>
+	<string name="url_base_update">https://www.dropbox.com/sh/p1l35rt6oar5x2w/AACNQeuuvPNNKZR0llXtM40ma/%s/</string>
 
 	<!-- URL base to find the full zip files, %s is expanded to property_device value. Path is suffixed by (expanded) filename_base -->
-	<string name="url_base_full">https://dl.omnirom.org/%s/</string>
+	<string name="url_base_full">https://www.dropbox.com/sh/omv0yqk2bpxixxd/AAB0Drm6SWxTx9nP8Rns_SRva/%s/</string>
 
 	<!-- URL base to fetch all builds -->
-	<string name="url_base_json">https://dl.omnirom.org/json.php"</string>
+	<string name="url_base_json">https://www.dropbox.com/s/3rwdoippyg201ch/builds.json"</string>
 
 	<!-- Applies whole-file signature delta. Adds one extra delta step. Required if recovery verifies signatures -->
-	<item name="apply_signature" type="bool">true</item>
+	<item name="apply_signature" type="bool">false</item>
 
 	<!-- (TWRP) Set this to false if the keys below aren't your ROM's -->
-	<item name="inject_signature_enable" type="bool">true</item>
+	<item name="inject_signature_enable" type="bool">false</item>
 
 	<!-- (TWRP) Verification signatures to inject. Produced by 'dumpkey.jar' (out/host) of the platform.x509 key used to sign the ZIP file -->
-	<string name="inject_signature_keys"><![CDATA[v2 {64,0x9d3ef4e7,{3451855145,2574857780,2212470067,2065828617,2220798544,1453138002,3035953543,349537325,3471576065,3709424322,1499657722,626083680,3508502098,135982109,2406850010,2674691998,3903782739,3673009508,3196976129,124737966,3727608735,3698514242,2926317182,2598715876,2200551045,3324466456,2027872794,1316834497,3538558575,4094723182,3091112109,152419065,961268200,2817719766,2542630774,735678394,2025086356,3319743251,3482513753,3754037486,2186326636,2162920719,1933319201,1362420666,3093979107,3944963833,3173846995,3307766644,4239176696,3380551792,3189093155,3679104199,4159403556,3373361362,737822358,2043192588,3446724037,2184123451,3680508975,492248740,1654088879,3739912969,188663922,4074712169},{2400585854,3884144496,312737665,3547448515,3596760612,2953776441,190371072,1980790627,3681130262,827104214,1597200957,1333455720,1391423898,4233042842,3284284880,50168935,2424437529,2771213818,3715896496,3320142743,3649069246,2702994054,839870558,1257344415,3116165843,4195920375,2497396347,1334871168,3550010104,64795091,3042249326,4155098628,123980023,3500559217,1825888674,443352554,3891428201,2484397377,4136956616,4201065713,2547196505,3411971111,2135688607,393830937,4198844531,3826748593,3979050977,1220766766,3592470842,2278136,1841247501,3507376964,3313320668,3849023694,2185649624,3043141327,1601153541,939583339,2083130022,3508853409,2068728550,3713282728,2402412627,1764295415}}]]></string>
+	<string name="inject_signature_keys"><![CDATA[v4 {64,0x93eaaacb,{2788693277,4250072142,4265276916,1778177131,2287849342,166627858,3611691895,1674121740,2447222828,3745820459,1140670683,2590448734,3443329340,495939529,3172187765,207065909,1190757123,3178543990,702335396,1773580436,2691597790,369842228,671690287,4023651436,4130647714,1618694184,1582525437,921666081,1423235529,3031545664,1118724993,4254039316,4159350492,2328950799,1437588331,1425152519,2533471656,3866715415,3331685572,653045006,2507551901,1036497709,1773315333,1155444604,1587683252,1358463437,1392650324,3197217970,790934913,3228032243,2773328692,1176901498,3881358995,2218541167,61555233,3519403581,1406988317,3445606586,3031945570,1128562481,1243216489,1001548923,285190125,3317822034},{4279756517,2001131723,2922152225,1368258620,147005116,2045556481,906526034,2867941931,3892583985,1814353075,3341431438,545721238,3869299498,3830347392,25357057,314594366,3261070946,3818365003,2840521628,2600996273,2567537117,1576311060,388728346,2712270490,3435613312,1214994531,2881898064,2070802148,77401154,2155054458,2541510411,3276352515,393558819,2177314481,2469078928,2484954218,1790497967,159218296,3868667787,3134568828,1856594341,59840974,1315466643,2477363514,2837513473,4109958234,1279715278,4276643604,1505254754,4136718956,273527839,3072892927,1727262925,3308486382,3428563348,977968421,1066137041,993004605,2689243252,3610698579,574303613,1776391915,2757186826,1502272669}}]]></string>
 
 	<!-- (TWRP) Add secure mode setting. Requires 'apply_signature' and 'inject_signature_enable'. Limits flashing to TWRP only, verifies ZIP signature in TWRP, disables auto-flashing of additional ZIPs -->
-	<item name="secure_mode_enable" type="bool">true</item>
+	<item name="secure_mode_enable" type="bool">false</item>
 
 	<!-- (TWRP) Requires 'secure_mode_enable'. Decides whether the default setting for secure mode is enabled (true) or disabled (false) -->
-	<item name="secure_mode_default" type="bool">true</item>
+	<item name="secure_mode_default" type="bool">false</item>
 
 	<!--
     	Devices (detected using property_device) which may crash while downloading/patching/verifying when the screen is off.
@@ -54,9 +54,9 @@
 		<item>i777</item>
 	</string-array>
 
-	<string name="official_version_tag">NIGHTLY</string>
+	<string name="official_version_tag">REALEASE</string>
 	<string name="weekly_version_tag">WEEKLY</string>
 	<string name="security_version_tag">SECURITY_RELEASE</string>
 
-	<string name="android_version">ro.build.version.release</string>
+	<string name="android_version">ro.cm.version</string>
 </resources>
